@@ -17,18 +17,18 @@ def test_eight_components(): # Defining the test_eight_components() function
     driver.get("https://www.selenium.dev/selenium/web/web-form.html") # Opens the URL in the browser
     title = driver.title # Retrieves the page title
     assert title == "Web form" # Asserts that the page title is a Web form
-    driver.implicitly_wait(0.5)
-    text_box = driver.find_element(by=By.NAME, value="my-text")
-    submit_button = driver.find_element(by=By.CSS_SELECTOR, value="button")
-    text_box.send_keys("Selenium")
-    submit_button.click()
-    message = driver.find_element(by=By.ID, value="message")
-    value = message.text
-    assert value == "Received!"
+    driver.implicitly_wait(0.5) # Introduces wait time of up to 0.5 seconds when attempting to find elements
+    text_box = driver.find_element(by=By.NAME, value="my-text") # Finds an element by name attribute
+    submit_button = driver.find_element(by=By.CSS_SELECTOR, value="button") # Navigates the webpage using a CSS selector to find a button and performs a click action
+    text_box.send_keys("Selenium") # Enables typing the text "Selenium" in a text box
+    submit_button.click() # Stimulates clicking the submit button
+    message = driver.find_element(by=By.ID, value="message") # Locates an element by the "ID" attribute and assigns it to variable "message"
+    value = message.text # Retrieves the text content of that element using "message.text" and assigns it to the variable "value"
+    assert value == "Received!" # Asserts that the text content is received
 
     # Closes Chrome
-    # driver.quit()
-    driver.close()
+    # driver.quit() # Closes browser tab
+    driver.close() # Closes the browser tab
 
 
-test_eight_components()
+test_eight_components() # A function call to run the test components
