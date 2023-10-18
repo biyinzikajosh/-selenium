@@ -1,9 +1,9 @@
-from selenium import webdriver
-from selenium.webdriver.common.by import By
-from selenium.webdriver.chrome.options import Options
+from selenium import webdriver # For importing the webdriver module from Selenium
+from selenium.webdriver.common.by import By # Helps in locating elements on a webpage
+from selenium.webdriver.chrome.options import Options # Allows you to configure setting and preferences for the Chrome Webdriver
 
 # Deprecated - no longer needed
-chrome_driver_path = "/Users/philippmuellauer/Development/chromedriver"
+chrome_driver_path = "/Users/philippmuellauer/Development/chromedriver" # Setting the path to the Chrome webdriver
 
 # keeps chrome open
 chrome_options = webdriver.ChromeOptions()
